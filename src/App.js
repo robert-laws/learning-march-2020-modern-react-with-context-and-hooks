@@ -1,4 +1,5 @@
 import React from 'react';
+import { LanguageContextProvider } from './context/LanguageContext';
 
 import './App.scss';
 
@@ -14,7 +15,9 @@ function App() {
           <Typography variant='h4' component='h1' gutterBottom>
             Application
           </Typography>
-          <AppHome />
+          <LanguageContextProvider>
+            <AppHome />
+          </LanguageContextProvider>
         </Box>
       </Container>
     </>
